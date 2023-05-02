@@ -24,23 +24,41 @@
 
 ### ①React memo
 
-todo
+#### 適用なしの場合
+
+親コンポーネントのみに存在する state が更新され、親コンポーネントに再レンダリングが走った際、子コンポーネントも再レンダリングが走っている。
+
+#### 適用ありの場合
+
+親コンポーネントのみに存在する state が更新され、親コンポーネントに再レンダリングが走った際、小コンポーネントには再レンダリングが走っていない。
 
 ### ②useCallback
 
-todo
+#### 適用なしの場合
+
+親コンポーネントのみに存在する state が更新され、親コンポーネントに再レンダリングが走った際、子コンポーネントも再レンダリングが走っている。
+
+#### 適用ありの場合
+
+親コンポーネントのみに存在する state が更新され、親コンポーネントに再レンダリングが走った際、小コンポーネントには再レンダリングが走っていない。
 
 ### ③useMemo
 
-todo
+#### 適用なしの場合
+
+コンポーネントの state に変更があり、コンポーネントに再レンダリングが走った際、都度処理が実行されている。
+
+#### 適用ありの場合
+
+コンポーネントの state に変更があり、コンポーネントに再レンダリングが走った際、処理が実行されていない。
 
 ## URL
 
-| 分類        | 項目       | URL                                                                  |
-| ----------- | ---------- | -------------------------------------------------------------------- |
-| React.memo  | メモ化なし | [/react-memo/not-apply](http://localhost:3000/react-memo/not-apply)  |
-|             | メモ化あり | [/react-memo/apply](http://localhost:3000/react-memo/apply)          |
-| useCallback | 適用なし   | [/usecallback/not-apply](http://localhost:3000/react-memo/not-apply) |
-|             | 適用あり   | [/usecallback/apply](http://localhost:3000/react-memo/apply)         |
-| useMemo     | 適用なし   | [/usememo/not-apply](http://localhost:3000/usememo/not-apply)        |
-|             | 適用あり   | [/usememo/apply](http://localhost:3000/usememo/apply)                |
+| 分類        | 項目     | URL                                                                  |
+| ----------- | -------- | -------------------------------------------------------------------- |
+| React.memo  | 適用なし | [/react-memo/not-apply](http://localhost:3000/react-memo/not-apply)  |
+|             | 適用あり | [/react-memo/apply](http://localhost:3000/react-memo/apply)          |
+| useCallback | 適用なし | [/usecallback/not-apply](http://localhost:3000/react-memo/not-apply) |
+|             | 適用あり | [/usecallback/apply](http://localhost:3000/react-memo/apply)         |
+| useMemo     | 適用なし | [/usememo/not-apply](http://localhost:3000/usememo/not-apply)        |
+|             | 適用あり | [/usememo/apply](http://localhost:3000/usememo/apply)                |

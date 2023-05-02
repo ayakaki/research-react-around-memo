@@ -13,6 +13,7 @@ export const UseCallbackApply: NextPage = () => {
 
   return (
     <>
+      <h2>useCallback適用ありの場合</h2>
       <p>親カウンター：{count}</p>
       <button onClick={() => setCount(count + 1)}>
         親カウンターインクリメント

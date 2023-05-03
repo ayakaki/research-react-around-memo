@@ -27,30 +27,36 @@
 #### 適用なしの場合
 
 親コンポーネントのみに存在する state が更新され、親コンポーネントに再レンダリングが走った際、子コンポーネントも再レンダリングが走っている。
+![react_memo_not_apply](https://user-images.githubusercontent.com/65984887/235817770-691c7a01-8a2a-4d2c-b86e-d29b54ae8ec7.gif)
 
 #### 適用ありの場合
 
 親コンポーネントのみに存在する state が更新され、親コンポーネントに再レンダリングが走った際、小コンポーネントには再レンダリングが走っていない。
+![react_memo_apply](https://user-images.githubusercontent.com/65984887/235817813-dd234270-f3ba-438a-9d3b-b350f155cd37.gif)
 
 ### ②useCallback
 
 #### 適用なしの場合
 
 親コンポーネントのみに存在する state が更新され、親コンポーネントに再レンダリングが走った際、子コンポーネントも再レンダリングが走っている。
+![usecallback_not_apply](https://user-images.githubusercontent.com/65984887/235817825-8dca116e-bcb3-47b0-8d4c-2ed979894e4c.gif)
 
 #### 適用ありの場合
 
 親コンポーネントのみに存在する state が更新され、親コンポーネントに再レンダリングが走った際、小コンポーネントには再レンダリングが走っていない。
+![usecallback_apply](https://user-images.githubusercontent.com/65984887/235817840-c615b418-eef5-4f04-b16c-a5b64e514a21.gif)
 
 ### ③useMemo
 
 #### 適用なしの場合
 
 コンポーネントの state に変更があり、コンポーネントに再レンダリングが走った際、都度処理が実行されている。
+![usememo_not_apply](https://user-images.githubusercontent.com/65984887/235817857-5615fb21-3f15-46bd-b086-96c49f1a8757.gif)
 
 #### 適用ありの場合
 
 コンポーネントの state に変更があり、コンポーネントに再レンダリングが走った際、処理が実行されていない。
+![usememo_apply](https://user-images.githubusercontent.com/65984887/235817879-3e1729d6-272c-4136-bdfb-0b540b6e925e.gif)
 
 ## URL
 
